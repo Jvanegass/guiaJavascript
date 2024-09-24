@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Guia 1</title>
+</head>
+<body>
+    <div class="grid text-center">
+        <!-- EJERCICIO 1 -->
+        <div class="g-col-12">
+            <h2>EJERCICIO 1: Validar Edad</h2>
+            <form id="formEjercicio1">
+                <div class="mb-3">
+                    <label for="edad" class="lblEdad">Ingrese su edad</label>
+                    <input type="number" class="inpEdad" id="inpEdad" required>
+                    <button type="submit" class="btn btn-primary">Validar</button>
+                </div>
+            </form>
+            <p id="resultadoEjercicio1"></p>
+        </div>
+
+        <!-- EJERCICIO 2 -->
+        <div class="g-col-12">
+            <h2>EJERCICIO 2: Nota Final de un Alumno</h2>
+            <form id="formEjercicio2">
+                <label>Nombre: <input type="text" id="nombre" required></label><br>
+                <label>Carnet: <input type="text" id="carnet" required></label><br>
+                <label>Examen: <input type="number" id="examen" required></label><br>
+                <label>Tareas: <input type="number" id="tareas" required></label><br>
+                <label>Asistencia: <input type="number" id="asistencia" required></label><br>
+                <label>Investigación: <input type="number" id="investigacion" required></label><br>
+                <button type="submit">Calcular Nota Final</button>
+            </form>
+            <p id="resultadoEjercicio2"></p>
+        </div>
+
+        <!-- EJERCICIO 3 -->
+        <div class="g-col-12">
+            <h2>EJERCICIO 3: Calcular Aumento de Trabajador</h2>
+            <form id="formEjercicio3">
+                <label>Nombre: <input type="text" id="nombreTrabajador" required></label><br>
+                <label>Salario: <input type="number" id="salario" required></label><br>
+                <label>Categoría (A/B/C/D): <input type="text" id="categoria" required></label><br>
+                <button type="submit">Calcular Aumento</button>
+            </form>
+            <p id="resultadoEjercicio3"></p>
+        </div>
+
+        <!-- EJERCICIO 4 -->
+        <div class="g-col-12">
+            <h2>EJERCICIO 4: Mayor de Dos Números</h2>
+            <form id="formEjercicio4">
+                <label>Número 1: <input type="number" id="numero1" required></label><br>
+                <label>Número 2: <input type="number" id="numero2" required></label><br>
+                <button type="submit">Calcular Mayor</button>
+            </form>
+            <p id="resultadoEjercicio4"></p>
+        </div>
+
+        <!-- EJERCICIO 5 -->
+        <div class="g-col-12">
+            <h2>EJERCICIO 5: Descuento en Compra de Coches</h2>
+            <form id="formEjercicio5">
+                <label>Coche (FORD FIESTA, FORD FOCUS, FORD ESCAPE): <input type="text" id="coche" required></label><br>
+                <label>Precio: <input type="number" id="precio" required></label><br>
+                <button type="submit">Calcular Descuento</button>
+            </form>
+            <p id="resultadoEjercicio5"></p>
+        </div>
+
+        <!-- EJERCICIO 6 -->
+        <div class="g-col-12">
+            <h2>EJERCICIO 6: Descuento en Viajes Turísticos</h2>
+            <form id="formEjercicio6">
+                <label>Origen: <input type="text" id="origen" required></label><br>
+                <label>Destino: <input type="text" id="destino" required></label><br>
+                <button type="submit">Calcular Descuento</button>
+            </form>
+            <p id="resultadoEjercicio6"></p>
+        </div>
+
+        <!-- EJERCICIO 7 -->
+        <div class="g-col-12">
+            <h2>EJERCICIO 7: Análisis de Valores</h2>
+            <form id="formEjercicio7">
+                <button type="submit">Ingresar 10 Valores</button>
+            </form>
+            <p id="resultadoEjercicio7"></p>
+        </div>
+
+        <!-- EJERCICIO 8 -->
+        <div class="g-col-12">
+            <h2>EJERCICIO 8: Tabla de Multiplicar</h2>
+            <form id="formEjercicio8">
+                <label>Número: <input type="number" id="numeroMultiplicar" required></label><br>
+                <button type="submit">Mostrar Tabla</button>
+            </form>
+            <p id="resultadoEjercicio8"></p>
+        </div>
+
+        <!-- EJERCICIO 9 -->
+        <div class="g-col-12">
+            <h2>EJERCICIO 9: Conversión de Temperatura</h2>
+            <form id="formEjercicio9">
+                <label>Temperatura en Celsius: <input type="number" id="temperaturaCelsius" required></label><br>
+                <button type="submit">Convertir a Fahrenheit</button>
+            </form>
+            <p id="resultadoEjercicio9"></p>
+        </div>
+
+        <!-- EJERCICIO 10 -->
+        <div class="g-col-12">
+            <h2>EJERCICIO 10: Promedio de Edades</h2>
+            <form id="formEjercicio10">
+                <label>Turno Mañana (5 edades): <input type="text" id="edadesMañana" placeholder="Separar por comas" required></label><br>
+                <label>Turno Tarde (6 edades): <input type="text" id="edadesTarde" placeholder="Separar por comas" required></label><br>
+                <label>Turno Noche (11 edades): <input type="text" id="edadesNoche" placeholder="Separar por comas" required></label><br>
+                <button type="submit">Calcular Promedios</button>
+            </form>
+            <p id="resultadoEjercicio10"></p>
+        </div>
+    </div>
+
+    <script>
+        // EJERCICIO 1
+        function validarEdad(edad) {
+            return edad >= 18 ? "La persona es mayor de edad" : "La persona es menor de edad";
+        }
+
+        document.getElementById('formEjercicio1').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const edad = document.getElementById('inpEdad').value;
+            const mensaje = validarEdad(edad);
+            document.getElementById('resultadoEjercicio1').innerText = mensaje;
+        });
+
+        // EJERCICIO 2
+        document.getElementById('formEjercicio2').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const carnet = document.getElementById('carnet').value;
+            const examen = parseFloat(document.getElementById('examen').value);
+            const tareas = parseFloat(document.getElementById('tareas').value);
+            const asistencia = parseFloat(document.getElementById('asistencia').value);
+            const investigacion = parseFloat(document.getElementById('investigacion').value);
+            const notaFinal = (examen * 0.2) + (tareas * 0.4) + (asistencia * 0.1) + (investigacion * 0.3);
+            document.getElementById('resultadoEjercicio2').innerText = `Alumno: ${nombre}, Carnet: ${carnet}, Nota Final: ${notaFinal.toFixed(2)}`;
+        });
+
+        // EJERCICIO 3
+        document.getElementById('formEjercicio3').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const nombre = document.getElementById('nombreTrabajador').value;
+            const salario = parseFloat(document.getElementById('salario').value);
+            const categoria = document.getElementById('categoria').value.toUpperCase();
+            let aumento = 0;
+
+            switch (categoria) {
+                case 'A':
+                    aumento = salario * 0.15;
+                    break;
+                case 'B':
+                    aumento = salario * 0.30;
+                    break;
+                case 'C':
+                    aumento = salario * 0.10;
+                    break;
+                case 'D':
+                    aumento = salario * 0.20;
+                    break;
+                default:
+                    document.getElementById('resultadoEjercicio3').innerText = 'Categoría inválida.';
+                    return;
+            }
+            const nuevoSalario = salario + aumento;
+            document.getElementById('resultadoEjercicio3').innerText = `Nombre: ${nombre}, Aumento: ${aumento.toFixed(2)}, Nuevo Salario: ${nuevoSalario.toFixed(2)}`;
+        });
+
+        // EJERCICIO 4
+        document.getElementById('formEjercicio4').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const numero1 = parseInt(document.getElementById('numero1').value);
+            const numero2 = parseInt(document.getElementById('numero2').value);
+            const mayor = Math.max(numero1, numero2);
+            document.getElementById('resultadoEjercicio4').innerText = `El número mayor es: ${mayor}`;
+        });
+
+        // EJERCICIO 5
+        document.getElementById('formEjercicio5').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const coche = document.getElementById('coche').value.toUpperCase();
+            const precio = parseFloat(document.getElementById('precio').value);
+            let descuento = 0;
+
+            switch (coche) {
+                case 'FORD FIESTA':
+                    descuento = precio * 0.05;
+                    break;
+                case 'FORD FOCUS':
+                    descuento = precio * 0.10;
+                    break;
+                case 'FORD ESCAPE':
+                    descuento = precio * 0.20;
+                    break;
+                default:
+                    document.getElementById('resultadoEjercicio5').innerText = 'Coche no válido.';
+                    return;
+            }
+            const precioFinal = precio - descuento;
+            document.getElementById('resultadoEjercicio5').innerText = `Coche: ${coche}, Descuento: ${descuento.toFixed(2)}, Precio Final: ${precioFinal.toFixed(2)}`;
+        });
+
+        // EJERCICIO 6
+        document.getElementById('formEjercicio6').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const origen = document.getElementById('origen').value.toLowerCase();
+            const destino = document.getElementById('destino').value.toLowerCase();
+            let descuento = 0;
+
+            if (origen === 'palma') {
+                if (destino === 'la costa del sol') {
+                    descuento = 0.05;
+                } else if (destino === 'panchimalco') {
+                    descuento = 0.10;
+                } else if (destino === 'puerto el triunfo') {
+                    descuento = 0.15;
+                }
+            }
+
+            document.getElementById('resultadoEjercicio6').innerText = `Descuento: ${(descuento * 100).toFixed(2)}%`;
+        });
+
+        // EJERCICIO 7
+        document.getElementById('formEjercicio7').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let negativos = 0, positivos = 0, multiplosDe15 = 0, sumaPares = 0;
+
+            for (let i = 0; i < 10; i++) {
+                const valor = parseInt(prompt(`Ingrese el valor ${i + 1}:`));
+                if (valor < 0) negativos++;
+                else positivos++;
+                if (valor % 15 === 0) multiplosDe15++;
+                if (valor % 2 === 0) sumaPares += valor;
+            }
+
+            document.getElementById('resultadoEjercicio7').innerText = `Negativos: ${negativos}, Positivos: ${positivos}, Múltiplos de 15: ${multiplosDe15}, Suma de Pares: ${sumaPares}`;
+        });
+
+        // EJERCICIO 8
+        document.getElementById('formEjercicio8').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const numero = parseInt(document.getElementById('numeroMultiplicar').value);
+            let tabla = '';
+
+            for (let i = 1; i <= 10; i++) {
+                tabla += `${numero} x ${i} = ${numero * i}<br>`;
+            }
+
+            document.getElementById('resultadoEjercicio8').innerHTML = tabla;
+        });
+
+        // EJERCICIO 9
+        document.getElementById('formEjercicio9').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const celsius = parseFloat(document.getElementById('temperaturaCelsius').value);
+            const fahrenheit = (celsius * 9/5) + 32;
+            let mensaje = '';
+
+            if (fahrenheit >= 14 && fahrenheit <= 32) {
+                mensaje = "Temperatura baja";
+            } else if (fahrenheit > 32 && fahrenheit <= 68) {
+                mensaje = "Temperatura adecuada";
+            } else if (fahrenheit > 68 && fahrenheit <= 96) {
+                mensaje = "Temperatura alta";
+            } else {
+                mensaje = "Temperatura desconocida";
+            }
+
+            document.getElementById('resultadoEjercicio9').innerText = `Temperatura en Fahrenheit: ${fahrenheit.toFixed(2)}°F. ${mensaje}`;
+        });
+
+        // EJERCICIO 10
+        document.getElementById('formEjercicio10').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const edadesMañana = document.getElementById('edadesMañana').value.split(',').map(Number);
+            const edadesTarde = document.getElementById('edadesTarde').value.split(',').map(Number);
+            const edadesNoche = document.getElementById('edadesNoche').value.split(',').map(Number);
+
+            const promedioMañana = edadesMañana.reduce((a, b) => a + b, 0) / edadesMañana.length;
+            const promedioTarde = edadesTarde.reduce((a, b) => a + b, 0) / edadesTarde.length;
+            const promedioNoche = edadesNoche.reduce((a, b) => a + b, 0) / edadesNoche.length;
+
+            const mensaje = `Promedio Mañana: ${promedioMañana.toFixed(2)}, Promedio Tarde: ${promedioTarde.toFixed(2)}, Promedio Noche: ${promedioNoche.toFixed(2)}.`;
+            const mayorTurno = Math.max(promedioMañana, promedioTarde, promedioNoche);
+
+            document.getElementById('resultadoEjercicio10').innerText = `${mensaje} El turno con mayor promedio es: ${mayorTurno === promedioMañana ? 'Mañana' : mayorTurno === promedioTarde ? 'Tarde' : 'Noche'}.`;
+        });
+    </script>
+</body>
+</html>

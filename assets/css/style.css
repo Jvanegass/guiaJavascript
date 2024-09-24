@@ -1,6 +1,5 @@
-/* assets/css/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap');
 
-/* Estilo General */
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -11,16 +10,17 @@ body {
 h2 {
     color: #333;
     margin-bottom: 10px;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
-/* Estilo para la Grid */
 .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
 }
 
-/* Estilo para las columnas */
 .g-col-12 {
     grid-column: span 12;
     background: #fff;
@@ -30,7 +30,6 @@ h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para los formularios */
 form {
     display: flex;
     flex-direction: column;
@@ -38,7 +37,9 @@ form {
 
 label {
     margin: 10px 0 5px;
-    font-weight: bold;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 input[type="number"],
@@ -52,7 +53,7 @@ input[type="text"] {
 button {
     margin-top: 10px;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #0e8b6c;
     color: white;
     border: none;
     border-radius: 5px;
@@ -62,7 +63,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #00b377;
 }
 
 /* Estilo para los resultados */
@@ -70,7 +71,10 @@ p {
     margin-top: 15px;
     padding: 10px;
     background: #e9ecef;
-    border-left: 4px solid #007bff;
+    border-left: 4px solid #12af73;
     border-radius: 5px;
     color: #333;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
